@@ -23,9 +23,8 @@ namespace Vidly.Controllers
         // GET: Movies/Random        
         public ViewResult Index()
         {
-            var movies = _context.Movies.Include(m => m.Genre).ToList();
 
-            return View(movies);
+            return View();
         }
         public ActionResult Details(int id)
         {
@@ -66,15 +65,16 @@ namespace Vidly.Controllers
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
+
             if (movie == null)
-            {
                 return HttpNotFound();
-            }
-            var viewModel = new MovieFormViewModel
+
+            var viewModel = new MovieFormViewModel(movie)
             {
                 Genres = _context.Genres.ToList()
             };
-            return View("MovieForm",viewModel);
+
+            return View("MovieForm", viewModel);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

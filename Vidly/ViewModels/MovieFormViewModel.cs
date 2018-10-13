@@ -10,6 +10,7 @@ namespace Vidly.ViewModels
     public class MovieFormViewModel
     {
         public IEnumerable<Genre> Genres { get; set; }
+        public Movie Movie { get; set; }
         public int? Id { get; set; }
         [Required]
         [StringLength(255)]
