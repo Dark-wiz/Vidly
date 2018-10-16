@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44358</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -269,6 +269,10 @@
     <Compile Include="Migrations\201810161319341_SeedUSers.cs" />
     <Compile Include="Migrations\201810161319341_SeedUSers.Designer.cs">
       <DependentUpon>201810161319341_SeedUSers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810161511442_AddDrivingLicenseToApplicationUser.cs" />
+    <Compile Include="Migrations\201810161511442_AddDrivingLicenseToApplicationUser.Designer.cs">
+      <DependentUpon>201810161511442_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -584,6 +588,9 @@
     <EmbeddedResource Include="Migrations\201810161319341_SeedUSers.resx">
       <DependentUpon>201810161319341_SeedUSers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810161511442_AddDrivingLicenseToApplicationUser.resx">
+      <DependentUpon>201810161511442_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -603,7 +610,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49827</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49827/</IISUrl>
+          <IISUrl>https://localhost:44358/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
